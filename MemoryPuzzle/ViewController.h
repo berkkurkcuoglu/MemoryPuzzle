@@ -12,5 +12,6 @@
 
 @property(strong,nonatomic) IBOutletCollection(UIImageView) NSArray *tiles;
 
+
 @end
 

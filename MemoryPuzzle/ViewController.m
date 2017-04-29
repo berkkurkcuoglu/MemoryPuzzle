@@ -25,5 +25,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tapped:(id)sender {
+    CGPoint tapPoint = [sender locationInView:self.view];
+    NSLog(@"%d",[self locateTap:tapPoint]);
+}
 
+-(int) locateTap:(CGPoint) tapPoint{
+    for(UIImageView *image in _tiles){
+        if(CGRectContainsPoint(image.frame, tapPoint))
+            return (int)[_tiles indexOfObject:image];
+    }
+    return -1;
+}
 @end
