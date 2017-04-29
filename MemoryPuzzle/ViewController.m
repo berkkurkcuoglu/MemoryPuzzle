@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _images = [[NSMutableArray alloc] init];
+    _assignedImages = [[NSMutableArray alloc] init];
+    _full = [[NSMutableArray alloc] init];
     [_images addObject:[UIImage imageNamed:@"1.jpg"]];
     [_images addObject:[UIImage imageNamed:@"2.jpg"]];
     [_images addObject:[UIImage imageNamed:@"3.jpg"]];
@@ -33,15 +36,15 @@
         [_full addObject:[NSNumber numberWithInteger:0]];
     }
     
-    /*for(int i=0;i<8;i++){
+    for(int i=0;i<8;i++){
         NSMutableArray *empty = [self findEmpty];
         u_int32_t length = (int)[empty count];
         u_int32_t random1 = arc4random_uniform(length);
         u_int32_t random2 = arc4random_uniform(length);
         while(random1 == random2)
             random2 = arc4random_uniform(length);
-        NSInteger index1 = (int)[empty objectAtIndex:random1];
-        NSInteger index2 = (int)[empty objectAtIndex:random2];
+        NSInteger index1 = [[empty objectAtIndex:random1] integerValue];
+        NSInteger index2 = [[empty objectAtIndex:random2] integerValue];
         [[_tiles objectAtIndex:index1] setImage:[_images objectAtIndex:i]];
         [[_tiles objectAtIndex:index2] setImage:[_images objectAtIndex:i]];
         [_assignedImages replaceObjectAtIndex:index1 withObject:[_images objectAtIndex:i]];
@@ -49,7 +52,7 @@
         [_full replaceObjectAtIndex:index1 withObject:[NSNumber numberWithInteger:1]];
         [_full replaceObjectAtIndex:index2 withObject:[NSNumber numberWithInteger:1]];
     }
-     */
+    
 }
 
 
@@ -72,10 +75,12 @@
 }
 
 -(NSMutableArray*) findEmpty{
-    NSMutableArray *empty;
-    for(NSNumber *i in _full){
-        if(i == 0)
-            [empty addObject:[NSNumber numberWithInteger:(int)[_full indexOfObject:i]]];
+    NSMutableArray *empty = [[NSMutableArray alloc] init];
+    NSInteger fullValue;
+    for(int i=0;i < 16; i++){
+        fullValue = [[_full objectAtIndex:i] integerValue];
+        if(fullValue == 0)
+            [empty addObject:[NSNumber numberWithInteger:i]];
     }
     return empty;
 }
