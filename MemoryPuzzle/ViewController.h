@@ -11,7 +11,8 @@
 @interface ViewController : UIViewController
 
 @property(strong,nonatomic) IBOutletCollection(UIImageView) NSArray *tiles;
-
-
+@property(nonatomic) NSMutableArray *images;
+@property(nonatomic) NSMutableArray *assignedImages;
+@property(nonatomic) NSMutableArray *full;
 @end
 

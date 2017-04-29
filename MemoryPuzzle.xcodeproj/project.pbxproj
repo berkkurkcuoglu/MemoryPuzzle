@@ -15,6 +15,15 @@
 		C07FF75E1EA98DC600F4FF77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07FF75C1EA98DC600F4FF77 /* LaunchScreen.storyboard */; };
 		C07FF7691EA98DC600F4FF77 /* MemoryPuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7681EA98DC600F4FF77 /* MemoryPuzzleTests.m */; };
 		C07FF7741EA98DC600F4FF77 /* MemoryPuzzleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7731EA98DC600F4FF77 /* MemoryPuzzleUITests.m */; };
+		C08DFFEE1EB462C8000744A9 /* cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFED1EB462C8000744A9 /* cover.jpg */; };
+		C08DFFF71EB4638A000744A9 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFEF1EB4638A000744A9 /* 1.jpg */; };
+		C08DFFF81EB4638A000744A9 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF01EB4638A000744A9 /* 2.jpg */; };
+		C08DFFF91EB4638B000744A9 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF11EB4638A000744A9 /* 3.jpg */; };
+		C08DFFFA1EB4638B000744A9 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF21EB4638A000744A9 /* 4.jpg */; };
+		C08DFFFB1EB4638B000744A9 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF31EB4638A000744A9 /* 5.jpg */; };
+		C08DFFFC1EB4638B000744A9 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF41EB4638A000744A9 /* 6.jpg */; };
+		C08DFFFD1EB4638B000744A9 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF51EB4638A000744A9 /* 7.jpg */; };
+		C08DFFFE1EB4638B000744A9 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF61EB4638A000744A9 /* 8.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,15 @@
 		C07FF76F1EA98DC600F4FF77 /* MemoryPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07FF7731EA98DC600F4FF77 /* MemoryPuzzleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryPuzzleUITests.m; sourceTree = "<group>"; };
 		C07FF7751EA98DC600F4FF77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08DFFED1EB462C8000744A9 /* cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover.jpg; sourceTree = "<group>"; };
+		C08DFFEF1EB4638A000744A9 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		C08DFFF01EB4638A000744A9 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		C08DFFF11EB4638A000744A9 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		C08DFFF21EB4638A000744A9 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		C08DFFF31EB4638A000744A9 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		C08DFFF41EB4638A000744A9 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		C08DFFF51EB4638A000744A9 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		C08DFFF61EB4638A000744A9 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +119,15 @@
 		C07FF74D1EA98DC600F4FF77 /* MemoryPuzzle */ = {
 			isa = PBXGroup;
 			children = (
+				C08DFFEF1EB4638A000744A9 /* 1.jpg */,
+				C08DFFF01EB4638A000744A9 /* 2.jpg */,
+				C08DFFF11EB4638A000744A9 /* 3.jpg */,
+				C08DFFF21EB4638A000744A9 /* 4.jpg */,
+				C08DFFF31EB4638A000744A9 /* 5.jpg */,
+				C08DFFF41EB4638A000744A9 /* 6.jpg */,
+				C08DFFF51EB4638A000744A9 /* 7.jpg */,
+				C08DFFF61EB4638A000744A9 /* 8.jpg */,
+				C08DFFED1EB462C8000744A9 /* cover.jpg */,
 				C07FF7511EA98DC600F4FF77 /* AppDelegate.h */,
 				C07FF7521EA98DC600F4FF77 /* AppDelegate.m */,
 				C07FF7541EA98DC600F4FF77 /* ViewController.h */,
@@ -249,9 +276,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08DFFFE1EB4638B000744A9 /* 8.jpg in Resources */,
+				C08DFFFD1EB4638B000744A9 /* 7.jpg in Resources */,
+				C08DFFFA1EB4638B000744A9 /* 4.jpg in Resources */,
+				C08DFFF81EB4638A000744A9 /* 2.jpg in Resources */,
 				C07FF75E1EA98DC600F4FF77 /* LaunchScreen.storyboard in Resources */,
+				C08DFFFB1EB4638B000744A9 /* 5.jpg in Resources */,
+				C08DFFFC1EB4638B000744A9 /* 6.jpg in Resources */,
 				C07FF75B1EA98DC600F4FF77 /* Assets.xcassets in Resources */,
 				C07FF7591EA98DC600F4FF77 /* Main.storyboard in Resources */,
+				C08DFFEE1EB462C8000744A9 /* cover.jpg in Resources */,
+				C08DFFF91EB4638B000744A9 /* 3.jpg in Resources */,
+				C08DFFF71EB4638A000744A9 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +552,7 @@
 				C07FF77A1EA98DC600F4FF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C07FF77B1EA98DC600F4FF77 /* Build configuration list for PBXNativeTarget "MemoryPuzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +561,7 @@
 				C07FF77D1EA98DC600F4FF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C07FF77E1EA98DC600F4FF77 /* Build configuration list for PBXNativeTarget "MemoryPuzzleUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +570,7 @@
 				C07FF7801EA98DC600F4FF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
