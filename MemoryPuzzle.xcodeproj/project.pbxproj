@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C074E7FB1EB7045700C1BADE /* cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = C074E7F91EB7045700C1BADE /* cancel.wav */; };
+		C074E7FC1EB7045700C1BADE /* confirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = C074E7FA1EB7045700C1BADE /* confirm.wav */; };
 		C07FF7501EA98DC600F4FF77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF74F1EA98DC600F4FF77 /* main.m */; };
 		C07FF7531EA98DC600F4FF77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7521EA98DC600F4FF77 /* AppDelegate.m */; };
 		C07FF7561EA98DC600F4FF77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7551EA98DC600F4FF77 /* ViewController.m */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C074E7F91EB7045700C1BADE /* cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cancel.wav; sourceTree = "<group>"; };
+		C074E7FA1EB7045700C1BADE /* confirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = confirm.wav; sourceTree = "<group>"; };
 		C07FF74B1EA98DC600F4FF77 /* MemoryPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07FF74F1EA98DC600F4FF77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C07FF7511EA98DC600F4FF77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		C07FF74D1EA98DC600F4FF77 /* MemoryPuzzle */ = {
 			isa = PBXGroup;
 			children = (
+				C074E7F91EB7045700C1BADE /* cancel.wav */,
+				C074E7FA1EB7045700C1BADE /* confirm.wav */,
 				C08DFFEF1EB4638A000744A9 /* 1.jpg */,
 				C08DFFF01EB4638A000744A9 /* 2.jpg */,
 				C08DFFF11EB4638A000744A9 /* 3.jpg */,
@@ -284,8 +290,10 @@
 				C08DFFFB1EB4638B000744A9 /* 5.jpg in Resources */,
 				C08DFFFC1EB4638B000744A9 /* 6.jpg in Resources */,
 				C07FF75B1EA98DC600F4FF77 /* Assets.xcassets in Resources */,
+				C074E7FB1EB7045700C1BADE /* cancel.wav in Resources */,
 				C07FF7591EA98DC600F4FF77 /* Main.storyboard in Resources */,
 				C08DFFEE1EB462C8000744A9 /* cover.jpg in Resources */,
+				C074E7FC1EB7045700C1BADE /* confirm.wav in Resources */,
 				C08DFFF91EB4638B000744A9 /* 3.jpg in Resources */,
 				C08DFFF71EB4638A000744A9 /* 1.jpg in Resources */,
 			);

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <AudioToolbox/AudioServices.h>
 
 
 @interface ViewController ()
@@ -166,6 +166,11 @@
         [[_tiles objectAtIndex:index1] removeFromSuperview];
         [[_tiles objectAtIndex:index2] removeFromSuperview];
         matches += 1;
+        NSString *path  = [[NSBundle mainBundle] pathForResource:@"confirm" ofType:@"wav"];
+        NSURL *pathURL = [NSURL fileURLWithPath : path];
+        SystemSoundID audioEffect;
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
         if(matches > 7){
             [timer invalidate];
             UIAlertController * alert=   [UIAlertController
@@ -190,6 +195,11 @@
         UIImage *cover = [UIImage imageNamed:@"cover.jpg"];
         [[_tiles objectAtIndex:index1] setImage:cover];
         [[_tiles objectAtIndex:index2] setImage:cover];
+        NSString *path  = [[NSBundle mainBundle] pathForResource:@"cancel" ofType:@"wav"];
+        NSURL *pathURL = [NSURL fileURLWithPath : path];
+        SystemSoundID audioEffect;
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
     }
     [_opened removeAllObjects];
     _opened = [[NSMutableArray alloc] init];
