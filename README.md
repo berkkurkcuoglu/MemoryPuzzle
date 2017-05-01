@@ -1,4 +1,4 @@
-Basic Memory Puzzle implementation in Objective C.
+Basic implementation of a Memory Puzzle game in Objective C.
 
 Created by Berk Kurkcuoglu & Kaan Caglar
 
