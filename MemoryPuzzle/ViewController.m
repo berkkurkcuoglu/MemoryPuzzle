@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+
+
 @interface ViewController ()
 
 @end
@@ -20,6 +22,7 @@
     _images = [[NSMutableArray alloc] init];
     _assignedImages = [[NSMutableArray alloc] init];
     _full = [[NSMutableArray alloc] init];
+    _opened = [[NSMutableArray alloc] init];
     [_images addObject:[UIImage imageNamed:@"1.jpg"]];
     [_images addObject:[UIImage imageNamed:@"2.jpg"]];
     [_images addObject:[UIImage imageNamed:@"3.jpg"]];
@@ -53,6 +56,14 @@
         [_full replaceObjectAtIndex:index2 withObject:[NSNumber numberWithInteger:1]];
     }
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        for(UIImageView *image in _tiles){
+            [image setImage:cover];
+        }
+
+    });
+    
+    
 }
 
 
@@ -63,7 +74,15 @@
 
 - (IBAction)tapped:(id)sender {
     CGPoint tapPoint = [sender locationInView:self.view];
-    NSLog(@"%d",[self locateTap:tapPoint]);
+    int indexNum = [self locateTap:tapPoint];
+    NSLog(@"%d",indexNum);
+    if(indexNum != -1){
+        [[_tiles objectAtIndex:indexNum] setImage:[_assignedImages objectAtIndex:indexNum]];
+        [_opened addObject:[NSNumber numberWithInteger:indexNum]];
+        if([_opened count] > 1)
+            [self performSelector:@selector(checkMatch) withObject:nil afterDelay:0.75];
+    }
+    
 }
 
 -(int) locateTap:(CGPoint) tapPoint{
@@ -72,6 +91,22 @@
             return (int)[_tiles indexOfObject:image];
     }
     return -1;
+}
+
+-(void)checkMatch{
+    NSInteger index1 = [[_opened objectAtIndex:0] integerValue];
+    NSInteger index2 = [[_opened objectAtIndex:1] integerValue];
+    if([_assignedImages objectAtIndex:index1] == [_assignedImages objectAtIndex:index2]){
+        [[_tiles objectAtIndex:index1] removeFromSuperview];
+        [[_tiles objectAtIndex:index2] removeFromSuperview];
+    }
+    else{
+        UIImage *cover = [UIImage imageNamed:@"cover.jpg"];
+        [[_tiles objectAtIndex:index1] setImage:cover];
+        [[_tiles objectAtIndex:index2] setImage:cover];
+    }
+    [_opened removeAllObjects];
+    _opened = [[NSMutableArray alloc] init];
 }
 
 -(NSMutableArray*) findEmpty{

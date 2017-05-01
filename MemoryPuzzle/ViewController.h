@@ -14,5 +14,6 @@
 @property(nonatomic) NSMutableArray *images;
 @property(nonatomic) NSMutableArray *assignedImages;
 @property(nonatomic) NSMutableArray *full;
+@property(nonatomic) NSMutableArray *opened;
 @end
 
