@@ -70,9 +70,10 @@
     });
     
     int x = [self view].frame.size.width/2 - 50;
-    int y = [self view].frame.size.height/15 - 25;
+    int y = [self view].frame.size.height/10 - 25;
     progress=[[UILabel alloc] initWithFrame:CGRectMake(x, y, 100, 50)];
     progress.textColor=[UIColor blackColor];
+    progress.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
     [progress setText:@"Time : 1:00"];
     progress.backgroundColor=[UIColor clearColor];
     [self.view addSubview:progress];
