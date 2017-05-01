@@ -11,7 +11,13 @@
 
 
 @interface ViewController ()
-
+{
+    UILabel *progress;
+    NSTimer *timer;
+    int currMinute;
+    int currSeconds;
+    int matches;
+}
 @end
 
 @implementation ViewController
@@ -60,16 +66,66 @@
         for(UIImageView *image in _tiles){
             [image setImage:cover];
         }
-
+        [self start];
     });
     
-    
+    progress=[[UILabel alloc] initWithFrame:CGRectMake(150, 15, 100, 50)];
+    progress.textColor=[UIColor redColor];
+    [progress setText:@"Time : 1:00"];
+    progress.backgroundColor=[UIColor clearColor];
+    [self.view addSubview:progress];
+    currMinute=1;
+    currSeconds=0;
+    matches = 0;
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)start
+{
+    timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+    
+}
+-(void)timerFired
+{
+    if((currMinute>0 || currSeconds>=0) && currMinute>=0)
+    {
+        if(currSeconds==0)
+        {
+            currMinute-=1;
+            currSeconds=59;
+        }
+        else if(currSeconds>0)
+        {
+            currSeconds-=1;
+        }
+        if(currMinute>-1)
+            [progress setText:[NSString stringWithFormat:@"%@%d%@%02d",@"Time : ",currMinute,@":",currSeconds]];
+    }
+    else
+    {
+        [timer invalidate];
+        
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"YOU LOSE!!!"
+                                      message:@"Better Luck Next Time!!!"
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"OK"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                             }];
+        
+        [alert addAction:ok];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (IBAction)tapped:(id)sender {
@@ -99,6 +155,25 @@
     if([_assignedImages objectAtIndex:index1] == [_assignedImages objectAtIndex:index2]){
         [[_tiles objectAtIndex:index1] removeFromSuperview];
         [[_tiles objectAtIndex:index2] removeFromSuperview];
+        matches += 1;
+        if(matches > 7){
+            [timer invalidate];
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"YOU WIN!!!"
+                                          message:@"Congratulations!!!"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction
+                                 actionWithTitle:@"OK"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                 }];
+            
+            [alert addAction:ok];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
     else{
         UIImage *cover = [UIImage imageNamed:@"cover.jpg"];

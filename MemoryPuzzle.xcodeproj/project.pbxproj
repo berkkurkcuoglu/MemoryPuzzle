@@ -24,6 +24,7 @@
 		C08DFFFC1EB4638B000744A9 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF41EB4638A000744A9 /* 6.jpg */; };
 		C08DFFFD1EB4638B000744A9 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF51EB4638A000744A9 /* 7.jpg */; };
 		C08DFFFE1EB4638B000744A9 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08DFFF61EB4638A000744A9 /* 8.jpg */; };
+		C096E41B1EB6E9580036FA43 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = C096E41A1EB6E9580036FA43 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C08DFFF41EB4638A000744A9 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
 		C08DFFF51EB4638A000744A9 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		C08DFFF61EB4638A000744A9 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		C096E41A1EB6E9580036FA43 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				C07FF75C1EA98DC600F4FF77 /* LaunchScreen.storyboard */,
 				C07FF75F1EA98DC600F4FF77 /* Info.plist */,
 				C07FF74E1EA98DC600F4FF77 /* Supporting Files */,
+				C096E41A1EB6E9580036FA43 /* readme.md */,
 			);
 			path = MemoryPuzzle;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			files = (
 				C07FF7561EA98DC600F4FF77 /* ViewController.m in Sources */,
 				C07FF7531EA98DC600F4FF77 /* AppDelegate.m in Sources */,
+				C096E41B1EB6E9580036FA43 /* readme.md in Sources */,
 				C07FF7501EA98DC600F4FF77 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
