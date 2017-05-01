@@ -69,8 +69,10 @@
         [self start];
     });
     
-    progress=[[UILabel alloc] initWithFrame:CGRectMake(150, 15, 100, 50)];
-    progress.textColor=[UIColor redColor];
+    int x = [self view].frame.size.width/2 - 50;
+    int y = [self view].frame.size.height/15 - 25;
+    progress=[[UILabel alloc] initWithFrame:CGRectMake(x, y, 100, 50)];
+    progress.textColor=[UIColor blackColor];
     [progress setText:@"Time : 1:00"];
     progress.backgroundColor=[UIColor clearColor];
     [self.view addSubview:progress];
@@ -121,6 +123,7 @@
                              handler:^(UIAlertAction * action)
                              {
                                  [alert dismissViewControllerAnimated:YES completion:nil];
+                                 [self performSegueWithIdentifier:@"menuSegue" sender:nil];
                              }];
         
         [alert addAction:ok];
@@ -134,7 +137,13 @@
     NSLog(@"%d",indexNum);
     if(indexNum != -1){
         [[_tiles objectAtIndex:indexNum] setImage:[_assignedImages objectAtIndex:indexNum]];
-        [_opened addObject:[NSNumber numberWithInteger:indexNum]];
+        if([_opened count] > 0){
+           if([[_opened objectAtIndex:0] integerValue] != indexNum)
+            [_opened addObject:[NSNumber numberWithInteger:indexNum]];
+        }
+        else{
+           [_opened addObject:[NSNumber numberWithInteger:indexNum]];
+        }
         if([_opened count] > 1)
             [self performSelector:@selector(checkMatch) withObject:nil afterDelay:0.75];
     }
@@ -169,6 +178,7 @@
                                  handler:^(UIAlertAction * action)
                                  {
                                      [alert dismissViewControllerAnimated:YES completion:nil];
+                                     [self performSegueWithIdentifier:@"menuSegue" sender:nil];
                                  }];
             
             [alert addAction:ok];
