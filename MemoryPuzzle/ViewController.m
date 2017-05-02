@@ -136,7 +136,7 @@
 - (IBAction)tapped:(id)sender {
     CGPoint tapPoint = [sender locationInView:self.view];
     int indexNum = [self locateTap:tapPoint];
-    NSLog(@"%d",indexNum);
+    //NSLog(@"%d",indexNum);
     if(indexNum != -1){
         [[_tiles objectAtIndex:indexNum] setImage:[_assignedImages objectAtIndex:indexNum]];
         if([_opened count] > 0){

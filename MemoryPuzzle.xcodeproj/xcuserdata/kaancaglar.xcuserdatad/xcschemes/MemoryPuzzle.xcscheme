@@ -17,7 +17,7 @@
                BlueprintIdentifier = "C07FF74A1EA98DC500F4FF77"
                BuildableName = "MemoryPuzzle.app"
                BlueprintName = "MemoryPuzzle"
-               ReferencedContainer = "container:FindTheJiff.xcodeproj">
+               ReferencedContainer = "container:MemoryPuzzle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "C07FF7631EA98DC600F4FF77"
                BuildableName = "MemoryPuzzleTests.xctest"
                BlueprintName = "MemoryPuzzleTests"
-               ReferencedContainer = "container:FindTheJiff.xcodeproj">
+               ReferencedContainer = "container:MemoryPuzzle.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "C07FF76E1EA98DC600F4FF77"
                BuildableName = "MemoryPuzzleUITests.xctest"
                BlueprintName = "MemoryPuzzleUITests"
-               ReferencedContainer = "container:FindTheJiff.xcodeproj">
+               ReferencedContainer = "container:MemoryPuzzle.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "C07FF74A1EA98DC500F4FF77"
             BuildableName = "MemoryPuzzle.app"
             BlueprintName = "MemoryPuzzle"
-            ReferencedContainer = "container:FindTheJiff.xcodeproj">
+            ReferencedContainer = "container:MemoryPuzzle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "C07FF74A1EA98DC500F4FF77"
             BuildableName = "MemoryPuzzle.app"
             BlueprintName = "MemoryPuzzle"
-            ReferencedContainer = "container:FindTheJiff.xcodeproj">
+            ReferencedContainer = "container:MemoryPuzzle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "C07FF74A1EA98DC500F4FF77"
             BuildableName = "MemoryPuzzle.app"
             BlueprintName = "MemoryPuzzle"
-            ReferencedContainer = "container:FindTheJiff.xcodeproj">
+            ReferencedContainer = "container:MemoryPuzzle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
