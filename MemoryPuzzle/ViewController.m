@@ -63,7 +63,7 @@
         [_full replaceObjectAtIndex:index2 withObject:[NSNumber numberWithInteger:1]];
     }
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         for(UIImageView *image in _tiles){
             [image setImage:cover];
         }
